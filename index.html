@@ -1,33 +1,121 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Enhanced UI</title>
-  <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
+  <title>New tab</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-  <header>
-    <h1>Enhanced Dashboard</h1>
-    <button id="toggle-theme">Toggle Theme</button>
-  </header>
+  <div id="main-wrapper" class="fancy-scrollbar">
+    <div id="main">
+      <div id="content">
+        <!-- Theme Toggle -->
+        <div id="theme-toggle-container" style="text-align: center; margin-top: 1rem;">
+          <button id="toggle-theme">Toggle Theme</button>
+        </div>
 
-  <main>
-    <div id="apps-container">
-      <a href="https://stackoverflow.com" class="app-link" data-name="Stack Overflow" title="Stack Overflow">
-        <i class="fa fa-stack-overflow"></i>
-        <span class="label">Stack Overflow</span>
-      </a>
-      <a href="https://github.com" class="app-link" data-name="GitHub" title="GitHub">
-        <i class="fa fa-github"></i>
-        <span class="label">GitHub</span>
-      </a>
-      <a href="https://chat.openai.com" class="app-link" data-name="ChatGPT" title="ChatGPT">
-        <i class="fa fa-comments-o"></i>
-        <span class="label">ChatGPT</span>
-      </a>
+        <!-- Links -->
+        <div id="links-container">
+          <a href="https://mail.google.com/mail/u/0/#inbox" title="Gmail">
+            <img class="gb_Kc" src="https://ssl.gstatic.com/ui/v1/icons/mail/rfr/logo_gmail_lockup_default_1x_r5.png"
+              style="width:109px;height:40px" />
+          </a>
+          <a href="https://discord.com/channels/@me" title="Discord">
+            <div class="childWrapper__01b9c">
+              <svg aria-hidden="true" role="img" width="30" height="22" viewBox="0 0 28 20">
+                <path fill="currentColor" d="..."></path>
+              </svg>
+            </div>
+          </a>
+          <a href="https://beacons.ai" title="About Page">About</a>
+        </div>
+
+        <!-- Header Container -->
+        <div class="mycontainer">
+          <div id="header-container">
+            <div class="parent">
+              <div class="child">
+                <main>
+                  <div class="atom">
+                    <div class="electron"></div>
+                    <div class="electron-alpha"></div>
+                    <div class="electron-omega"></div>
+                  </div>
+                </main>
+              </div>
+              <div class="child">
+                <button id="user-menu-button"></button>
+                <div class="social-buttons">
+                  <a href="https://www.instagram.com" class="social-button social-button--instagram" title="Instagram">
+                    <i class="fa">&#xf16d;</i>
+                  </a>
+                  <a href="https://www.youtube.com" class="social-button social-button--youtube" title="YouTube">
+                    <i class="fa">&#xf16a;</i>
+                  </a>
+                  <a href="https://www.facebook.com" class="social-button social-button--facebook" title="Facebook">
+                    <i class="fa">&#xF09a;</i>
+                  </a>
+                  <a href="https://www.linkedin.com" class="social-button social-button--linkedin" title="LinkedIn">
+                    <i class="fa">&#xF0e1;</i>
+                  </a>
+                  <a href="https://snapchat.com" class="social-button social-button--snapchat" title="Snapchat">
+                    <i class="fa">&#xf2ab;</i>
+                  </a>
+                  <a href="https://github.com" class="social-button social-button--github" title="GitHub">
+                    <i class="fa">&#xF09b;</i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Editable Tagline -->
+        <a style="display: inline-block;">
+          <h3 class="txt-ne" data-text="Developer Abdullah">
+            <div id="editable-text" contenteditable="true">Coding is my passion</div>
+          </h3>
+        </a>
+
+        <!-- Search -->
+        <div id="search-container">
+          <div id="search-input-container">
+            <img src="https://assets.codepen.io/1468070/Google+G+Icon.png" alt="" />
+            <input type="text" placeholder="Search anything" id="search" />
+          </div>
+          <button id="image-button" onclick="googleSearch();" type="button" title="Search">
+            <i class="fa">&#x1F50E;</i>
+          </button>
+          <button id="mic-button" type="button" title="Voice Input">
+            <i class="fa">&#x1F3A4;</i>
+          </button>
+        </div>
+
+        <!-- App Links -->
+        <div id="apps-container">
+          <a href="https://stackoverflow.com" class="app-link" data-name="Stack Overflow" title="Stack Overflow">
+            <i class="fa fa-stack-overflow"></i>
+            <div class="label">
+              <span class="name">Stack Overflow</span>
+              <span class="url" contenteditable="true">stackoverflow.com</span>
+            </div>
+          </a>
+          <a href="https://github.com/sparktech360" class="app-link" data-name="Github" title="Github" id="link2">
+            <i class="fa fa-github"></i>
+            <div class="label">
+              <span class="name">Github</span>
+              <span class="url" contenteditable="true">github.com</span>
+            </div>
+          </a>
+          <!-- Add more apps as needed -->
+        </div>
+      </div>
     </div>
-  </main>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
 </body>
 </html>
