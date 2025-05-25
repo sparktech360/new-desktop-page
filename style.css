@@ -57,6 +57,19 @@ body.dark .app-link:hover {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
+body.light {
+  background-color: #f4f4f4;
+  color: #111;
+}
+body.dark {
+  background-color: #121212;
+  color: #fff;
+}
+
+.app-link.visited {
+  border: 2px solid limegreen;
+}
+
 button {
   padding: 0.5rem 1rem;
   cursor: pointer;
